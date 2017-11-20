@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Allgemein">
+		<setting label="Aktiviere Intro Service" type="bool" id="state_intro_service" default="false"/>
+		<setting label="Aktiviere Feste-Outro-Länge Service" type="bool" id="state_outro_static_service" default="false"/>
+		<setting label="Aktiviere Outro AUTO Service (Experimentell und Windows only)" type="bool" id="state_outro_auto_service" default="false"/>
+		<setting label="AUTO-Outro Service nur für Serien" type="bool" id="state_outro_auto_service_shows_only" enable="!eq(-1,false)" default="true"/>
+		<setting label="Nutze lokale DB" type="bool" id="state_local_db" default="false"/>
+	</category>
+</settings>

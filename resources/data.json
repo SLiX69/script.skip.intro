@@ -1,0 +1,32 @@
+[
+  {
+    "title": "American Dad",
+    "introLength": 30,
+    "outroLength": 33,
+    "service": true
+  },
+  {
+    "title": "Family Guy",
+    "introLength": 33,
+    "outroLength": 32,
+    "service": true
+  },
+  {
+    "title": "South Park",
+    "introLength": 30,
+    "outroLength": 10,
+    "service": true
+  },
+  {
+    "title": "Westworld",
+    "introLength": 100,
+    "outroLength": 10,
+    "service": true
+  },
+  {
+    "title": "Taboo",
+    "introLength": 61,
+    "outroLength": 10,
+    "service": false
+  }
+]
