@@ -56,7 +56,11 @@ class Service:
             self.serv = True
 
 
-    def main(self):
+    def main(self, manual=False):
+        if manual:
+            dialog = xbmcgui.Dialog()
+            dialog.notification('Service', 'MANUAL', xbmcgui.NOTIFICATION_INFO, 3000)
+
         dialog = xbmcgui.Dialog()
         #dialog.notification('Service', 'STARTED', xbmcgui.NOTIFICATION_INFO, 3000)
         xbmc.log("PRINT", level=-1)
@@ -68,6 +72,9 @@ class Service:
                 xbmc.log("PLAYING", level=-1)
                 cur_time = xbmc.Player().getTime()
                 cur_title = xbmc.Player().getVideoInfoTag().getTVShowTitle()
+
+                if manual:
+                    dialog.notification('SKIP', cur_title, xbmcgui.NOTIFICATION_INFO, 1000)
 
                 if self.intr_serv:
                     if cur_time < 10:
