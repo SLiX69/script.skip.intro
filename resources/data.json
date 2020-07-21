@@ -6,6 +6,12 @@
     "service": true
   },
   {
+    "title": "American Dad!",
+    "introLength": 30,
+    "outroLength": 33,
+    "service": true
+  },
+  {
     "title": "Family Guy",
     "introLength": 33,
     "outroLength": 32,

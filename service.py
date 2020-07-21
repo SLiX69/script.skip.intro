@@ -3,7 +3,6 @@ import time
 from resources.lib.data import Data
 from resources.lib.addon import Addon
 import difflib
-from PIL import ImageGrab
 import random
 import math
 
@@ -57,11 +56,10 @@ class Service:
 
 
     def main(self, manual=False):
+        dialog = xbmcgui.Dialog()
         if manual:
-            dialog = xbmcgui.Dialog()
             dialog.notification('Service', 'MANUAL', xbmcgui.NOTIFICATION_INFO, 3000)
 
-        dialog = xbmcgui.Dialog()
         #dialog.notification('Service', 'STARTED', xbmcgui.NOTIFICATION_INFO, 3000)
         xbmc.log("PRINT", level=-1)
         xbmc.log(str(self.intr_serv))
@@ -136,7 +134,7 @@ class Service:
             xbmc.log(str(e), level=-1)
             pass
 
-
+#rename class, something like Recognize Outro
 class Outro:
 
     def __init__(self):
@@ -148,7 +146,7 @@ class Outro:
 
         capture = xbmc.RenderCapture()
 
-        image = ImageGrab.grab()
+        image = capture.getImage()
         total_width, height = image.size
 
         width = int(height * capture.getAspectRatio())
